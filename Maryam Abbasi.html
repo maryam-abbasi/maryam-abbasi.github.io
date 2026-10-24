@@ -1,0 +1,252 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<meta name="claude:viewport-fit-sides" content="cover">
+<title>Maryam Abbasi</title>
+<style>
+  /* Layout: single-column editorial page — hero, then a wide research-theme grid, then narrow text columns for everything else */
+  :root {
+    --bg: #eef0ea;
+    --surface: #ffffff;
+    --ink: #102236;
+    --ink-soft: #4d5b6b;
+    --line: #d7dbd0;
+    --accent: #b9781a;
+    --accent-ink: #3a2a0c;
+    color-scheme: light;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #0d141c;
+      --surface: #141d27;
+      --ink: #e8ece6;
+      --ink-soft: #a6b0ad;
+      --line: #263142;
+      --accent: #e0a235;
+      --accent-ink: #1a1306;
+      color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #0d141c;
+    --surface: #141d27;
+    --ink: #e8ece6;
+    --ink-soft: #a6b0ad;
+    --line: #263142;
+    --accent: #e0a235;
+    --accent-ink: #1a1306;
+    color-scheme: dark;
+  }
+
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: "IBM Plex Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    padding-left: max(20px, env(safe-area-inset-left, 0px));
+    padding-right: max(20px, env(safe-area-inset-right, 0px));
+  }
+
+  .wrap { max-width: 1040px; margin: 0 auto; }
+  .prose { max-width: 640px; }
+
+  h1, h2, h3 { font-family: "Source Serif 4", Georgia, "Times New Roman", serif; font-weight: 600; text-wrap: balance; margin: 0; }
+  .eyebrow {
+    font-family: "IBM Plex Mono", ui-monospace, monospace;
+    font-size: 0.72rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--accent);
+  }
+
+  a { color: var(--accent); text-decoration-thickness: 1px; }
+  a:hover { text-decoration-thickness: 2px; }
+
+  /* Hero */
+  .hero {
+    padding-block: 72px 56px;
+    display: flex;
+    gap: 36px;
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+  .monogram {
+    flex: 0 0 auto;
+    width: 92px;
+    height: 92px;
+    border-radius: 50%;
+    background: var(--accent);
+    color: var(--accent-ink);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Source Serif 4", serif;
+    font-size: 2.1rem;
+    font-weight: 600;
+  }
+  .hero-text { flex: 1 1 360px; min-width: 0; }
+  .hero h1 { font-size: clamp(2rem, 4vw, 2.7rem); margin-top: 6px; }
+  .hero .role { color: var(--ink-soft); font-size: 1.05rem; margin-top: 8px; }
+  .hero .affil { margin-top: 4px; color: var(--ink-soft); font-size: 0.95rem; }
+
+  .idlinks { display: flex; flex-wrap: wrap; gap: 10px 18px; margin-top: 18px; font-family: "IBM Plex Mono", monospace; font-size: 0.82rem; }
+  .idlinks a { color: var(--ink-soft); }
+  .idlinks a:hover { color: var(--accent); }
+
+  section { padding-block: 40px; border-top: 1px solid var(--line); }
+  section > h2 { font-size: 1.5rem; margin-bottom: 18px; }
+
+  /* Research grid */
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 18px;
+    margin-top: 8px;
+  }
+  .card {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 20px;
+    min-width: 0;
+  }
+  .card h3 { font-size: 1.05rem; margin-bottom: 8px; }
+  .card p { margin: 0; color: var(--ink-soft); font-size: 0.92rem; }
+
+  /* Affiliations list */
+  .affil-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 14px; }
+  .affil-list li { display: grid; grid-template-columns: 110px 1fr; gap: 14px; }
+  .affil-list .tag { font-family: "IBM Plex Mono", monospace; font-size: 0.78rem; color: var(--accent); padding-top: 2px; }
+  .affil-list .detail strong { display: block; }
+  .affil-list .detail span { color: var(--ink-soft); font-size: 0.92rem; }
+  @media (max-width: 480px) {
+    .affil-list li { grid-template-columns: 1fr; gap: 2px; }
+  }
+
+  /* Profiles / metrics links */
+  .profiles { display: flex; flex-direction: column; gap: 10px; }
+  .profile-row {
+    display: flex; justify-content: space-between; gap: 16px; align-items: baseline;
+    padding-block: 10px; border-bottom: 1px solid var(--line);
+    flex-wrap: wrap;
+  }
+  .profile-row .name { font-weight: 600; }
+  .profile-row .meta { font-family: "IBM Plex Mono", monospace; font-size: 0.82rem; color: var(--ink-soft); }
+
+  .note {
+    font-size: 0.85rem;
+    color: var(--ink-soft);
+    border-left: 2px solid var(--accent);
+    padding-left: 14px;
+    margin-top: 22px;
+  }
+
+  footer {
+    padding-block: 40px calc(40px + env(safe-area-inset-bottom, 0px));
+    border-top: 1px solid var(--line);
+    color: var(--ink-soft);
+    font-size: 0.88rem;
+  }
+</style>
+
+<div class="wrap">
+
+  <div class="hero">
+    <div class="monogram">MA</div>
+    <div class="hero-text">
+      <div class="eyebrow">Artificial Intelligence · Computational Biology</div>
+      <h1>Maryam Abbasi</h1>
+      <div class="role">Auxiliary Researcher &amp; Professor</div>
+      <div class="affil">Santarém Polytechnic University</div>
+      <div class="idlinks">
+        <a href="https://orcid.org/0000-0002-9011-0734" target="_blank" rel="noopener">ORCID 0000-0002-9011-0734</a>
+        <a href="https://www.scopus.com/authid/detail.uri?authorId=55651881400" target="_blank" rel="noopener">Scopus Author ID</a>
+        <a href="http://www.cienciavitae.pt/4317-9113-7F7C" target="_blank" rel="noopener">CiênciaVitae</a>
+      </div>
+    </div>
+  </div>
+
+  <section id="about">
+    <h2>About</h2>
+    <div class="prose">
+      <p>Maryam Abbasi is a researcher in Artificial Intelligence and Machine Learning, holding a PhD in Informatics Engineering (University of Coimbra, 2019, Distinction and Honour). She holds a permanent position as Auxiliary Researcher at Santarém Polytechnic University, is an Integrated Researcher at the Centre for Research in Arts and Communication (CIAC – Pólo de Literacia Digital e Inclusão Social), and a collaborating researcher at the Laboratory of Artificial Neural Networks (LARN), CISUC, University of Coimbra.</p>
+      <p>Her research lies at the intersection of Artificial Intelligence, Bioinformatics, Health, and Behavioural Sciences, with particular focus on deep generative models, multi-objective reinforcement learning, transformer architectures, and explainable AI.</p>
+    </div>
+  </section>
+
+  <section id="research">
+    <h2>Research focus</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Explainable &amp; trustworthy ML</h3>
+        <p>Classification, model comparison, threshold selection, and evaluation methods that researchers and clinicians can interpret and trust.</p>
+      </div>
+      <div class="card">
+        <h3>AI for health &amp; bioinformatics</h3>
+        <p>Readmission prevention, healthcare access, biomedical image analysis, and multi-omics applications.</p>
+      </div>
+      <div class="card">
+        <h3>Drug discovery &amp; generative models</h3>
+        <p>Molecular generation, reinforcement learning, and transformer-based design for antimicrobial peptides and small molecules.</p>
+      </div>
+      <div class="card">
+        <h3>Agentic AI &amp; knowledge graphs</h3>
+        <p>Research automation, knowledge graph construction, and secure, adversarially-robust large language models.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="affiliations">
+    <h2>Affiliations</h2>
+    <ul class="affil-list">
+      <li>
+        <span class="tag">PRIMARY</span>
+        <div class="detail">
+          <strong>Santarém Polytechnic University</strong>
+          <span>School of Management and Technology — Auxiliary Researcher &amp; Professor</span>
+        </div>
+      </li>
+      <li>
+        <span class="tag">RESEARCH</span>
+        <div class="detail">
+          <strong>CIAC-PLDIS</strong>
+          <span>Centre for Research in Arts and Communication — Pólo de Literacia Digital e Inclusão Social, Integrated Researcher</span>
+        </div>
+      </li>
+      <li>
+        <span class="tag">COLLAB.</span>
+        <div class="detail">
+          <strong>CISUC / LARN, University of Coimbra</strong>
+          <span>Laboratory of Artificial Neural Networks — Collaborating Researcher</span>
+        </div>
+      </li>
+    </ul>
+  </section>
+
+  <section id="publications">
+    <h2>Publications &amp; metrics</h2>
+    <div class="profiles">
+      <div class="profile-row">
+        <span class="name">ORCID record</span>
+        <a class="meta" href="https://orcid.org/0000-0002-9011-0734" target="_blank" rel="noopener">orcid.org/0000-0002-9011-0734 →</a>
+      </div>
+      <div class="profile-row">
+        <span class="name">Scopus author profile</span>
+        <a class="meta" href="https://www.scopus.com/authid/detail.uri?authorId=55651881400" target="_blank" rel="noopener">Author ID 55651881400 →</a>
+      </div>
+      <div class="profile-row">
+        <span class="name">CiênciaVitae</span>
+        <a class="meta" href="http://www.cienciavitae.pt/4317-9113-7F7C" target="_blank" rel="noopener">4317-9113-7F7C →</a>
+      </div>
+    </div>
+    <p class="note">Over 100 publications, with contributions to Q1 journals including <em>Briefings in Bioinformatics</em>, <em>Journal of Cheminformatics</em>, <em>Artificial Intelligence in Medicine</em>, and <em>Computers in Biology and Medicine</em> (self-reported; see ORCID for the current, authoritative list).</p>
+  </section>
+
+  <footer>
+    Fill in before publishing: a current photo, a public contact email, and (optionally) a Google Scholar link once your profile consolidation is complete.
+  </footer>
+
+</div>
+
+</body></html>
